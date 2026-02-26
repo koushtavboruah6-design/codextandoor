@@ -1,0 +1,14 @@
+{
+  "name": "codetandoor",
+  "version": "1.0.0",
+  "description": "BridgeNE – Student Opportunity Portal",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "build": "cd frontend && npm run build && rm -rf ../backend/public && cp -r build ../backend/public",
+    "start": "cd backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
